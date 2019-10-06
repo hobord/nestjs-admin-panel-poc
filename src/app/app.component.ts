@@ -1,6 +1,5 @@
-import { Component, Optional } from '@angular/core';
-import { MatDialogRef, MatDialog } from '@angular/material/dialog';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { Component } from '@angular/core';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +9,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class AppComponent {
   isDarkTheme = false;
 
-  constructor() {
+  constructor(private authService: AuthService) {
   }
 }
