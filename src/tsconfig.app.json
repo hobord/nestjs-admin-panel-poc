@@ -3,7 +3,12 @@
   "compilerOptions": {
     "outDir": "../out-tsc/app",
     "module": "es2015",
-    "types": []
+    "types": [],
+    "lib": [
+      "es2017",
+      "dom",
+      "esnext.asynciterable"
+    ]
   },
   "exclude": [
     "src/test.ts",

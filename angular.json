@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/nestjs-admin-panel-poc",
+            "outputPath": "dist/application",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -45,6 +45,15 @@
               "vendorChunk": false,
               "buildOptimizer": true
             }
+          }
+        },
+        "express": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "showCircularDependencies": false,
+            "outputPath": "dist/express",
+            "main": "src/server.ts",
+            "tsConfig": "src/tsconfig.app.json"
           }
         },
         "serve": {
