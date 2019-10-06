@@ -4,7 +4,8 @@ mat-sidenav-container.m2app-dark {
 
 .app-content {
   padding: 5px;
-  min-height: 600px;
+  // min-height: 100vh;
+  min-height: calc(100vh - 74px);
 }
 
 .app-content mat-card {
