@@ -2,7 +2,7 @@ import {NgModule, Inject, PLATFORM_ID, Optional} from '@angular/core';
 import {ApolloModule, APOLLO_OPTIONS, Apollo} from 'apollo-angular';
 import {HttpLinkModule, HttpLink, HttpLinkHandler} from 'apollo-angular-link-http';
 import {InMemoryCache, IntrospectionFragmentMatcher} from 'apollo-cache-inmemory';
-import { EnvService } from './services/env.service';
+import { EnvService, IEnvDTO } from './services/env.service';
 
 // const introspectionQueryResultData = require('src/app/entities/GraphQL/graphql.fragmentTypes.json');
 
@@ -24,7 +24,7 @@ export class GraphQLModule {
     this.cache = new InMemoryCache({ fragmentMatcher });
 
 
-    envService.getConfig().subscribe((env: any) => {
+    envService.getConfig().subscribe((env: IEnvDTO) => {
       // const uri = 'http://localhost:3000/graphql';
       const uri = env.graphSRV;
       this.link = this.httpLink.create({ uri });

@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './app.material.module';
 import { GraphQLModule } from './graphql.module';
 import { AppRoutingModule } from './app-routing.module';
+// import { EnvService } from './services/env.service';
 
 
 
@@ -44,6 +45,8 @@ import { AppRoutingModule } from './app-routing.module';
     //   },
     //   deps: [HttpLink]
     // }
+    // { provide: EnvService, useClass: EnvService }
+    // EnvService
   ],
   bootstrap: [AppComponent]
 })
