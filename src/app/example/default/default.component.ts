@@ -15,6 +15,13 @@ export class DefaultComponent implements OnInit, OnDestroy {
 
   constructor(private readonly apollo: Apollo) { }
 
+  logout() {
+    // some app logic
+
+    // reset the store after that
+    this.apollo.getClient().resetStore();
+  }
+
   ngOnInit() {
     this.apollo
       .query<QueryResult>({
