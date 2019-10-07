@@ -3,16 +3,6 @@ import gql from 'graphql-tag';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 
-// const PROFILE_QUERY = gql`
-//   query CurrentUser {
-//     whoAmI {
-//       id
-//       email
-//       roles
-//     }
-//   }
-// `;
-
 const LOGIN_QUERY =  gql`
 query CurrentUser($username:String!, $password: String!) {
   login(username:$username, password:$password) {
