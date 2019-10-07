@@ -1,0 +1,18 @@
+version: "3.6"
+
+services:
+  admin-panel:
+    image: node
+    working_dir: /app
+    command: "sh develop-entry.sh"
+    environment:
+      PORT: "4200"
+      NODE_TLS_REJECT_UNAUTHORIZED: "0"
+      GRAPHSRV: "https://graphql-pokemon.now.sh/?"
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./:/app
+      - "node-modules:/app/node_modules"
+volumes:
+  node-modules:

@@ -47,15 +47,6 @@
             }
           }
         },
-        "express": {
-          "builder": "@angular-devkit/build-angular:server",
-          "options": {
-            "showCircularDependencies": false,
-            "outputPath": "dist/express",
-            "main": "src/server.ts",
-            "tsConfig": "src/tsconfig.app.json"
-          }
-        },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {

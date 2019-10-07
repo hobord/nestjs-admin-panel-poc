@@ -8,7 +8,7 @@ const _port = process.env.PORT || 9090;
 const _app_folder = 'dist/application';
 const env = {
   // graphSRV: 'http://localhost:8080'
-  graphSRV: 'https://graphql-pokemon.now.sh/?'
+  graphSRV: process.env.GRAPHSRV || 'https://graphql-pokemon.now.sh/?'
 };
 // options for cors midddleware
 const corsOptions = {
@@ -40,9 +40,6 @@ app.use(serveStatic(_app_folder, {
 app.all('*', function (req, res) {
   res.status(200).sendFile(`/`, {root: _app_folder});
 });
-
-
-
 
 
 // ---- START UP THE NODE SERVER  ----
