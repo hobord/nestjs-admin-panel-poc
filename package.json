@@ -20,7 +20,7 @@
     "serve-static": "^1.14.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.803.8",
+    "@angular-devkit/build-angular": "~15.0.0",
     "@angular/animations": "^8.2.9",
     "@angular/cdk": "^8.2.2",
     "@angular/cli": "~8.3.8",
